@@ -1,0 +1,1 @@
+# setting-eslint-prettier-nextjs
