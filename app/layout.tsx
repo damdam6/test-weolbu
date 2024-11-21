@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { RecoilRoot } from 'recoil';
 
 import { LayoutWrapper } from './_styles/layout.css';
 
