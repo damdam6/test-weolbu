@@ -13,4 +13,5 @@ export const ConfirmButton = style({
   color: vars.colors.white,
   borderStyle: 'none',
   backgroundColor: vars.colors.blue,
+  cursor: 'pointer',
 });

@@ -27,6 +27,7 @@ export const ButtonStyle = recipe({
     borderStyle: 'solid',
     borderWidth: '1px',
     borderColor: vars.colors.gray,
+    cursor: 'pointer',
   }),
   variants: {
     color: colorVariants, // colorVariants 매핑

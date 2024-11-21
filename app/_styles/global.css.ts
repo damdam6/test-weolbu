@@ -7,8 +7,8 @@ globalStyle('*', {
   boxSizing: 'border-box',
   lineHeight: '16px',
 });
-
-globalStyle('commerce-button:hover', {
+globalStyle('button', {
+  all: 'unset',
   cursor: 'pointer',
 });
 
