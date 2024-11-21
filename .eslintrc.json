@@ -105,6 +105,14 @@
         "tsx": "never"
       }
     ],
+    "no-restricted-exports": [
+      "error",
+      {
+        "restrictDefaultExports": {
+          "defaultFrom": false
+        }
+      }
+    ],
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",

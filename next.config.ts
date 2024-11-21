@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withVanillaExtract = createVanillaExtractPlugin();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['cdn.weolbu.com'],
+  },
 };
 
-export default nextConfig;
+module.exports = withVanillaExtract(nextConfig);
