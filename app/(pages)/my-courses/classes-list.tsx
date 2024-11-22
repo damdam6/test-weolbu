@@ -23,9 +23,6 @@ interface StatusType {
 }
 
 const ClassesList = ({ status }: Props) => {
-  const state = useClassStore.getState();
-  const [filteredClasses, setFilteredClasses] = useState<ClassState[]>([]);
-
   const statusType: Record<'purchase' | 'cart', StatusType> = {
     purchase: {
       status: 'purchase',
@@ -39,14 +36,11 @@ const ClassesList = ({ status }: Props) => {
     },
   };
 
-  const [statusStyle, setStatusStyle] = useState(statusType.cart);
-  useEffect(() => {
-    setStatusStyle(statusType[status]);
-    const filtered = Object.values(state.classes).filter(
-      (classItem) => classItem.status === status,
-    );
-    setFilteredClasses(filtered);
-  }, []);
+  const state = useClassStore.getState();
+  const statusStyle = statusType[status];
+  const filteredClasses = Object.values(state.classes).filter(
+    (classItem) => classItem.status === status,
+  );
 
   return (
     <div className={styles.ClassListWrapper({ color: statusStyle.color })}>
